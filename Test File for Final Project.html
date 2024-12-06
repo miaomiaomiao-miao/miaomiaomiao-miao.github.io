@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Haoting Ma - Personal Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/Assets/Images/fish.png">
+    <link rel="stylesheet" href="Assets/CSS/test file.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+<!-- Navigation Header -->
+<nav>
+    <ul>
+        <img src="Assets/Images/fish.png" alt="Website Logo" class="logo logo-hover" />
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<img src="Assets/Images/panda.png" alt="Go back to top" class="back-to-top" onclick="scrollToTop()">
+
+<div class="container">
+
+    <header>
+        <!-- Avatar Section -->
+        <img src="Assets/Images/Avatar.jpeg" alt=" Avatar" class="avatar">
+        <h1 class="animate__slideInLeft">Hello, I am</h1>
+        <h1 class="animate__slideInDown">Haoting Ma</h1>
+    </header>
+
+    <!-- About Me Section -->
+    <div class="about section" id="about">
+        <div class="section-title">About Me</div>
+        <ul>
+            <h3>An aspiring Master of Information Studies Student at McGill University with a strong background in user-centered design and human-computer interaction, seeking to leverage interdisciplinary skills to create innovative solutions that enhance user experiences. Passionate about exploring the intersection of accessibility and emerging technologies to drive impactful design.</h3>
+        </ul>
+    </div>
+
+    <!-- Education Section -->
+    <div class="education section" id="education">
+        <div class="section-title">Education</div>
+        <ul>
+            <li>
+                <strong>Master of Information Studies</strong> - McGill University | 2023 - Current
+                <p>Studied HTML, CSS, and creative digital design techniques.</p>
+            </li>
+            <li>
+                <strong>Bachelor of Arts in Statistics</strong> - McGill University | 2019 - 2023
+                <p>Focused on statistics, programming, and machine learning.</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="experience section" id="experience">
+        <div class="section-title">Experience</div>
+        <ul>
+            <li>
+                <strong>Software Developer</strong> - XYZ Corp | Jan 2021 - Present
+                <ul>
+                    <li>Built and maintained high-performance web applications using modern tech stacks.</li>
+                    <li>Collaborated with designers and developers to implement seamless user interfaces.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Junior Developer</strong> - ABC Ltd | Jun 2019 - Dec 2020
+                <ul>
+                    <li>Contributed to the development of e-commerce websites and mobile apps.</li>
+                    <li>Worked on debugging and optimizing back-end systems.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills section" id="skills">
+        <div class="section-title">Skills</div>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SQL</li>
+            <li>R</li>
+            <li>Python</li>
+            <li>UX/UI Design</li>
+        </ul>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info section" id="contact">
+        <div class="section-title">Contact Info</div>
+        <ul>
+            <li>Email: <a href="mailto:xxx.xx@example.com">xxx.xx@example.com</a></li>
+            <li>Phone: +123 456 7890</li>
+            <li>Location: New York, USA</li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/xxxx" target="_blank">linkedin.com/in/xxx.xxx</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ by </p>
+    </footer>
+
+</div>
+
+<script>
+    // Get the button
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    // Show or hide the button based on scroll position
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopButton.classList.remove('hidden');
+        } else {
+            backToTopButton.classList.add('hidden');
+        }
+    };
+
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'  // Smooth scroll effect
+        });
+    }
+</script>
+
+
+</body>
+</html>
