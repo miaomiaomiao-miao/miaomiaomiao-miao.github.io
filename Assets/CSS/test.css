@@ -1,0 +1,506 @@
+/* Global Styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(135deg, #9CB7D2, #7EA1C4);
+    color: #1B365C;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    position: relative;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+}
+
+/* Sticky Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FEF6E9; /* Bright, semi-transparent background */
+    padding: 5px 15px;
+    z-index: 10;
+    box-shadow: none;
+    animation: fadeIn 2s ease-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #9CB7D2;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #9CB7D2;
+    color: #ffffff;
+}
+
+/* Image Logo */
+.logo {
+    width: 50px;  /* Set the logo width */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 20px; /* Optional: space between logo and text */
+}
+
+.logo-hover:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Style for the back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 100;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Show button when scrolling down */
+.back-to-top.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Global Container */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+    text-align: center;
+    padding-top: 120px; /* Adjust space for sticky nav */
+}
+
+/* Header Section */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 90px;
+}
+
+header .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: fadeIn 2.5s ease-out;
+}
+
+header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 0;
+    animation: 1.2s;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2em;
+    margin: 30px 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    color: #274D83;
+    position: relative;
+    animation: bounceIn 1s ease-out;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+/* About Me Section */
+.about ul {
+    padding: 0;
+    font-size: 1.2em;
+    text-align: left;
+    margin: 0 auto;
+    width: 70%;
+    color: #274D83
+}
+
+/* Contact and Info */
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.contact-info ul li {
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.contact-info a {
+    color: #274D83;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #fff;
+}
+
+/* Experience Section */
+.experience ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    text-align: left;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.experience ul li {
+    margin: 20px 0;
+}
+
+.experience strong {
+    font-size: 1.3em;
+    color: #274D83;
+}
+
+/* Style for the 'Read More' button */
+.read-more-btn {
+    background-color: #9CB7D2;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;  /* Adjust margin above the button */
+    margin-bottom: 10px;  /* Adjust margin below the button */
+    margin-left: 15px;  /* Adjust margin to the left */
+    margin-right: 15px;
+    transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #7EA1C4;
+}
+
+/* Style for the hidden additional content */
+.more-details {
+    display: none;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: white;
+}
+
+
+/* Research Section */
+.research ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    text-align: left;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.research strong {
+    font-size: 1.3em;
+    color: #274D83;
+}
+
+/* Add Frame Style */
+#pdfFrame {
+    width: 100%;
+    height: 600px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 100px;
+    overflow: hidden;  /* Hide scrollbar */
+}
+
+/* Optional: Styling the scrollbar */
+#pdfFrame::-webkit-scrollbar {
+    width: 8px;
+}
+
+#pdfFrame::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+#pdfFrame::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Education Section */
+.education ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    text-align: left;
+    margin: 0 auto;
+    width: 70%;
+    animation: fadeInUp 2s ease-out;
+}
+
+.education ul li {
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 3px solid #ffffff;
+}
+
+.education ul li strong {
+    font-size: 1.3em;
+    color: #274D83;
+}
+
+/* Skills Section */
+.skills {
+    padding: 40px 20px;
+    background: #FEF6E9;  /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(227, 220, 220, 0.15);
+    backdrop-filter: blur(10px);  /* Add subtle blur effect to blend with the background */
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    color: white;
+}
+
+.skills li {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    color: #9CB7D2;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* Light border for separation */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skills li:hover {
+    transform: translateY(-10px);
+    background-color: #9CB7D2;  /* Subtle green on hover */
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    color: #f4f4f4;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    border-top: 2px solid #fff;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Design */
+/* Mobile and Small Devices */
+@media (max-width: 768px) {
+    /* Header Section */
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .skills ul {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .contact-info ul li {
+        font-size: 1em;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .back-to-top {
+        width: 60px;  /* Smaller size */
+        height: 60px; /* Smaller size */
+        bottom: 15px; /* Adjust position */
+        right: 15px;  /* Adjust position */
+    }
+
+    .experience ul,
+    .education ul {
+        width: 100%;  /* Full width for smaller screens */
+        font-size: 1em;
+    }
+
+    .skills ul {
+        grid-template-columns: 1fr;  /* Stack the skills vertically */
+        font-size: 1em;  /* Smaller font size for mobile */
+    }
+
+    .skills li {
+        padding: 15px;  /* Adjust padding for smaller screens */
+    }
+
+    /* Navbar */
+    nav ul {
+        flex-direction: row;
+        gap: 5px; /* Smaller gap between navbar items */
+        align-items: center; /* Align items to center */
+    }
+
+    nav ul li a {
+        padding: 2px 2px;
+        font-size: x-small; /* Adjust font size for smaller screens */
+    }
+
+    .logo {
+        width: 20px; /* Smaller logo on mobile */
+    }
+}
+
+/* Tablet and Small Desktop */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Header Section */
+    header h1 {
+        font-size: 3em;
+    }
+
+    .skills ul {
+        grid-template-columns: repeat(2, 1fr);  /* Two columns for medium-sized screens */
+    }
+
+    .skills li {
+        padding: 20px;  /* Adjust padding for tablets */
+    }
+
+    .back-to-top {
+        width: 80px;  /* Medium size */
+        height: 80px; /* Medium size */
+        bottom: 20px; /* Adjust position */
+        right: 20px;  /* Adjust position */
+    }
+
+    .experience ul,
+    .education ul {
+        width: 80%;  /* Slightly narrower width for medium-sized screens */
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    /* Navbar */
+    nav ul {
+        flex-direction: row;
+        justify-content: space-evenly; /* Spread out navbar items */
+    }
+
+    nav ul li a {
+        padding: 5px 5px;
+        font-size: small; /* Adjust font size for medium screens */
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1025px) {
+    /* Header Section */
+    header h1 {
+        font-size: 3.5em;
+    }
+
+    .skills ul {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Multiple columns for large screens */
+    }
+
+    .skills li {
+        padding: 25px;  /* Default padding for larger screens */
+    }
+
+    .back-to-top {
+        width: 100px;  /* Default size */
+        height: 100px; /* Default size */
+        bottom: 20px;  /* Adjust position */
+        right: 20px;   /* Adjust position */
+    }
+
+    .experience ul,
+    .education ul {
+        width: 70%;  /* Default width for large screens */
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    /* Navbar */
+    nav ul {
+        flex-direction: row; /* Horizontal layout for large screens */
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: large;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}

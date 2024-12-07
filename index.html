@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Haoting Ma - Personal Portfolio</title>
+    <title>Haoting Ma - Personal CV</title>
     <link rel="icon" type="image/x-icon" href="/Assets/Images/fish.png">
-    <link rel="stylesheet" href="Assets/CSS/test file.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/test.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
 <!-- Navigation Header -->
 <nav>
     <ul>
-        <img src="Assets/Images/fish.png" alt="Website Logo" class="logo logo-hover" />
+        <img src="Assets/Images/fish.png" alt="Website Logo" class="logo logo-hover"/>
         <li><a href="#about">About Me</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#research">Research</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <!-- Get My CV download link -->
+        <li><a href="Assets/Files/Haoting_Ma_CV.pdf" download="HaotingMa_CV.pdf">Get My CV</a></li>
     </ul>
 </nav>
 
+<!-- This is the go back to top function-->
 <img src="Assets/Images/panda.png" alt="Go back to top" class="back-to-top" onclick="scrollToTop()">
 
+<!-- Start with displaying information-->
 <div class="container">
 
     <header>
@@ -41,16 +44,22 @@
     <div class="about section" id="about">
         <div class="section-title">About Me</div>
         <ul>
-            <h3>An aspiring Master of Information Studies Student at McGill University with a strong background in user-centered design and human-computer interaction, seeking to leverage interdisciplinary skills to create innovative solutions that enhance user experiences. Passionate about exploring the intersection of accessibility and emerging technologies to drive impactful design.</h3>
+            <h3>An aspiring <span style="color: white;">Master of Information Studies</span> Student at 
+                <span style="color: white;">McGill University</span> with 
+                a strong background in <span style="color: white;"> design and human-computer interaction</span>, 
+                seeking to leverage interdisciplinary skills to create innovative solutions 
+                that enhance user experiences. Passionate about exploring the intersection of 
+                accessibility and emerging technologies to drive impactful design.</h3>
         </ul>
     </div>
+
 
     <!-- Education Section -->
     <div class="education section" id="education">
         <div class="section-title">Education</div>
         <ul>
             <li>
-                <strong>Master of Information Studies</strong> - McGill University | 2023 - Current
+                <strong>Master of Information Studies</strong> - McGill University | 2023 - Present
                 <p>Studied HTML, CSS, and creative digital design techniques.</p>
             </li>
             <li>
@@ -65,25 +74,33 @@
         <div class="section-title">Experience</div>
         <ul>
             <li>
-                <strong>Software Developer</strong> - XYZ Corp | Jan 2021 - Present
-                <ul>
-                    <li>Built and maintained high-performance web applications using modern tech stacks.</li>
-                    <li>Collaborated with designers and developers to implement seamless user interfaces.</li>
-                </ul>
+                <strong style="font-style: italic;">Course Project1</strong> - McGill University | Sep 2024 - Present
+                <button class="read-more-btn" onclick="toggleDetails('experience-1')">Read More</button>
+                <div class="more-details" id="experience-1">
+                    <ul>
+                        <li>1. Designed a low-fidelity wireframe ensuring alignment with the goals of a personal CV website before progressing to high-fidelity designs</li>
+                        <li>2. Developed an interactive prototype to visualize design concepts and facilitate user testing, enabling iterative design enhancements</li>
+                        <li>3. Refined both the prototype and wireframe ensuring a seamless and user-friendly final design in CSS and HTML</li>
+                    </ul>
+                </div>
             </li>
             <li>
-                <strong>Junior Developer</strong> - ABC Ltd | Jun 2019 - Dec 2020
-                <ul>
-                    <li>Contributed to the development of e-commerce websites and mobile apps.</li>
-                    <li>Worked on debugging and optimizing back-end systems.</li>
-                </ul>
+                <strong style="font-style: italic;">Course Project2</strong> - McGill University | Sep 2024 - Present
+                <button class="read-more-btn" onclick="toggleDetails('experience-2')">Read More</button>
+                <div class="more-details" id="experience-2">
+                    <ul>
+                        <li>1. Researched and analyzed the global diversity of Computer Science PhD programs across North America</li>
+                        <li>2. Identified challenges in the decentralized and fragmented PhD application processes</li>
+                        <li>3. Proposed a centralized database solution to streamline application management for North American CS PhD programs including a functional interface in SQL</li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </div>
 
     <!-- Skills Section -->
     <div class="skills section" id="skills">
-        <div class="section-title">Skills</div>
+        <div class="section-title" style="border-bottom: 2px solid black;";>Skills</div>
         <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -94,25 +111,37 @@
         </ul>
     </div>
 
+    <!-- Research Section -->
+    <div class="research section" id="research">
+        <div class="section-title">Research</div>
+        <ul>
+            <strong>Master Thesis</strong> - McGill University | Sept 2023 - Present
+            <p>Discovering VR Design Opportunities on Reminiscence Support for Older Adults</p>
+        </ul>
+    </div>
+
+    <div>
+        <iframe src="Assets/Files/IMG_7785.pdf" id="pdfFrame"></iframe>
+    </div>
+
     <!-- Contact Information -->
     <div class="contact-info section" id="contact">
         <div class="section-title">Contact Info</div>
         <ul>
-            <li>Email: <a href="mailto:xxx.xx@example.com">xxx.xx@example.com</a></li>
-            <li>Phone: +123 456 7890</li>
-            <li>Location: New York, USA</li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/xxxx" target="_blank">linkedin.com/in/xxx.xxx</a></li>
+            <li>Email: <a href="mailto:haoting.ma@mcgill.ca">haoting.ma@mcgill.ca</a></li>
+            <li>Phone: <span style="color: #274D83; font-weight: bold;">+514 632 9022</span></li>
+            <li>Location: <span style="color: #274D83; font-weight: bold;">Montreal, CANADA</span></li>
         </ul>
     </div>
 
     <footer>
-        <p>Made with ❤️ by </p>
+        <p>&#169; 2024 Haoting Ma. All Rights Reserved.</p>
     </footer>
 
 </div>
 
 <script>
-    // Get the button
+    // Get the back to top button
     const backToTopButton = document.querySelector('.back-to-top');
 
     // Show or hide the button based on scroll position
@@ -131,8 +160,18 @@
             behavior: 'smooth'  // Smooth scroll effect
         });
     }
+
+    // Read more function
+    function toggleDetails(id) {
+    var moreDetails = document.getElementById(id);
+    if (moreDetails.style.display === "none" || moreDetails.style.display === "") {
+        moreDetails.style.display = "block";
+    } else {
+        moreDetails.style.display = "none";
+    }
+}
+
+
 </script>
-
-
 </body>
 </html>
